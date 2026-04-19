@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color-dark: #161b33;
+    --primary-color-light: #32489e;
+    --secondary-color-dark: #51cc61;
+    --secondary-color-light: #7de37c;
+    --background-color: #f0f0f0;
+    --text-color-dark: #ffffff;
+    --text-color-light: #000000;
+
+    --primary-font: 'Bebas Neue', 'Open Sans', sans-serif;
+    --secondary-font: 'Roboto', 'Montserrat', sans-serif;
+}
+
+@media all {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        font-family: var(--secondary-font);
+        background-color: var(--primary-color-dark);
+        color: var(--text-color-light);
+    }
+
+    header {
+        font-family: var(--primary-font);
+        background-color: var(--primary-color-light);
+        color: var(--text-color-dark);
+        padding: 20px;
+        text-align: center;
+    }
+
+    div {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    nav {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    nav ul, a {
+        list-style-type: none;
+        text-decoration: none;
+        color: var(--text-color-dark);
+        font-weight: bold;
+    }
+
+    nav li {
+        margin: 20px;
+        padding: 30px;
+        border-radius: 15px;
+        background-color: var(--secondary-color-dark);
+    }
+
+    li:hover {
+        background-color: var(--secondary-color-light);
+        scale: 1.05;
+        transition: all 0.5s ease-in-out;
+    }
+
+    li:active {
+        box-shadow: 1px 1px 5px var(--background-color);
+    }
+
+    iframe {
+        width: 100%;
+        height: 600px;
+        aspect-ratio: 16 / 9;
+    }
+
+}
+
+@media screen and (orientation: portrait) {
+    div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    nav li {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+}
