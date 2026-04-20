@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --primary-color-dark: #161b33;
-    --primary-color-light: #32489e;
-    --secondary-color-dark: #51cc61;
-    --secondary-color-light: #7de37c;
+    --primary-color-dark: #151a31;
+    --primary-color-light: #314cb8;
+    --secondary-color-dark: #329b40;
+    --secondary-color-light: #42cc55;
     --background-color: #f0f0f0;
     --text-color-dark: #ffffff;
     --text-color-light: #000000;
@@ -48,7 +48,7 @@
     nav ul, a {
         list-style-type: none;
         text-decoration: none;
-        color: var(--text-color-dark);
+        color: var(--text-color-light);
         font-weight: bold;
     }
 
@@ -61,12 +61,18 @@
 
     li:hover {
         background-color: var(--secondary-color-light);
+        border: 1px solid var(--background-color);
+        color: var(--text-color-dark);
         scale: 1.05;
         transition: all 0.5s ease-in-out;
     }
 
-    li:active {
-        box-shadow: 1px 1px 5px var(--background-color);
+    a:focus li, a:active li {
+        background-color: var(--secondary-color-light);
+        border: 1px solid var(--background-color);
+        box-shadow: 0px 0px 10px var(--background-color);
+        color: var(--text-color-dark);
+        scale: 1.05;
     }
 
     iframe {
@@ -87,11 +93,18 @@
         margin: 10px;
         padding: 15px;
     }
+
+    iframe {
+        aspect-ratio: 9 / 16;
+    }
 }
 
 @media screen and (orientation: landscape) {
     div {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 88vh;
     }
 }
